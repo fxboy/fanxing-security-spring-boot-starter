@@ -1,4 +1,4 @@
-package live.fanxing.security.handler;
+package live.fanxing.authentication.handler;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

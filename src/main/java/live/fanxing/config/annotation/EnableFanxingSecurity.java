@@ -1,6 +1,6 @@
-package live.fanxing.security.annotation;
+package live.fanxing.config.annotation;
 
-import live.fanxing.security.FanxingSecurityAutoConfiguration;
+import live.fanxing.config.FanxingSecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
 import java.lang.annotation.ElementType;

@@ -1,13 +1,13 @@
-package live.fanxing.security.properties;
+package live.fanxing.config.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "fanxing.security")
+@ConfigurationProperties(prefix = "fanxing.authentication")
 public class FanxingSecurityProperties {
     private String VerifyAuthorityImpl;
+    @Deprecated
     private String ToKenKey;
     private String AuthenticationFailureImpl;
     private String AuthenticationSuccessfulImpl;
@@ -37,10 +37,12 @@ public class FanxingSecurityProperties {
         VerifyAuthorityImpl = verifyAuthorityImpl;
     }
 
+    @Deprecated
     public String getToKenKey() {
         return ToKenKey;
     }
 
+    @Deprecated
     public void setToKenKey(String toKenKey) {
         ToKenKey = toKenKey;
     }

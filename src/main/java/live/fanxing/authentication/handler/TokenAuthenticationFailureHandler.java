@@ -1,4 +1,4 @@
-package live.fanxing.security.handler;
+package live.fanxing.authentication.handler;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
