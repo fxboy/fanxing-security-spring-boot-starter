@@ -4,6 +4,9 @@
 
 Simple token asynchronous verification authority framework, support custom success failure return to the page content
 
+码云： https://gitee.com/fxyun/fanxing-security-spring-boot-starter
+
+GIthub：https://github.com/fxboy/fanxing-security-spring-boot-starter
 
 ## 1.开始
 
