@@ -6,5 +6,5 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface AuthenticationSuccessfulHandler {
-    void AuthenticationSuccessful(HttpServletRequest request, HttpServletResponse response,ProceedingJoinPoint proceedingJoinPoint) throws Throwable ;
+    void authenticationSuccessful(HttpServletRequest request, HttpServletResponse response,ProceedingJoinPoint proceedingJoinPoint);
 }

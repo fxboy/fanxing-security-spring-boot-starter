@@ -10,5 +10,5 @@ import java.lang.annotation.*;
 public @interface HasAuthRole {
     String[] roles();
     String[] permissions() default {};
-    Method method() default Method.AUTO;
+    String[] method() default "AUTO";
 }

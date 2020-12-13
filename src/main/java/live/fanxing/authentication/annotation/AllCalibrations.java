@@ -5,7 +5,6 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE,ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Deprecated
-public @interface HasPermission {
-    String[] value();
+public @interface AllCalibrations {
+    boolean permission() default true;
 }

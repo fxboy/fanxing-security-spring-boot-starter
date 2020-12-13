@@ -6,52 +6,51 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "fanxing.authentication")
 public class FanxingSecurityProperties {
-    private String VerifyAuthorityImpl;
-    @Deprecated
-    private String ToKenKey;
-    private String AuthenticationFailureImpl;
-    private String AuthenticationSuccessfulImpl;
-    private String TokenAuthenticationFailureImpl;
 
-    public String getAuthenticationFailureImpl() {
-        return AuthenticationFailureImpl;
+    private String authenticationExceptionHandlerImpl;  //鉴权期间出异常后处理的实现类
+    private String authenticationFailureHandlerImpl;   // 鉴权失败后处理的实现类
+    private String verifyAuthorityHandlerImpl; //开发者传权校验入口
+    private String authenticationSuccessfulImpl; //鉴权成功后处理的实现类
+    @Deprecated
+    private String userAuthorityExceptionHandlerImpl; //用户校验失败后出现的异常实现类
+
+    public String getAuthenticationExceptionHandlerImpl() {
+        return authenticationExceptionHandlerImpl;
     }
 
-    public void setAuthenticationFailureImpl(String authenticationFailureImpl) {
-        AuthenticationFailureImpl = authenticationFailureImpl;
+    public void setAuthenticationExceptionHandlerImpl(String authenticationExceptionHandlerImpl) {
+        this.authenticationExceptionHandlerImpl = authenticationExceptionHandlerImpl;
+    }
+
+    public String getAuthenticationFailureHandlerImpl() {
+        return authenticationFailureHandlerImpl;
+    }
+
+    public void setAuthenticationFailureHandlerImpl(String authenticationFailureHandlerImpl) {
+        this.authenticationFailureHandlerImpl = authenticationFailureHandlerImpl;
+    }
+
+    public String getVerifyAuthorityHandlerImpl() {
+        return verifyAuthorityHandlerImpl;
+    }
+
+    public void setVerifyAuthorityHandlerImpl(String verifyAuthorityHandlerImpl) {
+        this.verifyAuthorityHandlerImpl = verifyAuthorityHandlerImpl;
     }
 
     public String getAuthenticationSuccessfulImpl() {
-        return AuthenticationSuccessfulImpl;
+        return authenticationSuccessfulImpl;
     }
 
     public void setAuthenticationSuccessfulImpl(String authenticationSuccessfulImpl) {
-        AuthenticationSuccessfulImpl = authenticationSuccessfulImpl;
+        this.authenticationSuccessfulImpl = authenticationSuccessfulImpl;
     }
 
-    public String getVerifyAuthorityImpl() {
-        return VerifyAuthorityImpl;
+    public String getUserAuthorityExceptionHandlerImpl() {
+        return userAuthorityExceptionHandlerImpl;
     }
 
-    public void setVerifyAuthorityImpl(String verifyAuthorityImpl) {
-        VerifyAuthorityImpl = verifyAuthorityImpl;
-    }
-
-    @Deprecated
-    public String getToKenKey() {
-        return ToKenKey;
-    }
-
-    @Deprecated
-    public void setToKenKey(String toKenKey) {
-        ToKenKey = toKenKey;
-    }
-
-    public String getTokenAuthenticationFailureImpl() {
-        return TokenAuthenticationFailureImpl;
-    }
-
-    public void setTokenAuthenticationFailureImpl(String tokenAuthenticationFailureImpl) {
-        TokenAuthenticationFailureImpl = tokenAuthenticationFailureImpl;
+    public void setUserAuthorityExceptionHandlerImpl(String userAuthorityExceptionHandlerImpl) {
+        this.userAuthorityExceptionHandlerImpl = userAuthorityExceptionHandlerImpl;
     }
 }
