@@ -13,14 +13,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  *  permission: 权限
  * */
 public class Authentications<T>{
-    int size = 0;
     HashMap<String,T> value;
 
     public Authentications(){
         this.value = new HashMap<String,T>();
     }
     public int size(){
-        return this.size;
+        return this.value.size();
     }
 
     /**
@@ -30,17 +29,9 @@ public class Authentications<T>{
      * @param permissions 操作权限 多个 只可以是数组或者字符串
      * */
     public void add(String role,T permissions) {
-        value.put(role,permissions);
-        this.size++;
+        this.value.put(role,permissions);
     }
 
-    public boolean iAdopt(boolean adopt){
-        if(adopt){
-            return adopt;
-        }else{
-            return !adopt;
-        }
-    }
 
     public List<String> hasRole(List<String> roles) throws RolesLengthExcetion {
         List<String> hasRoles = new ArrayList<String>(); //用来存当前用户所通过的权限
@@ -216,7 +207,6 @@ public class Authentications<T>{
     @Override
     public String toString() {
         return "Authentications{" +
-                "size=" + size +
                 ", value=" + value +
                 '}';
     }
