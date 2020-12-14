@@ -1,9 +1,5 @@
 # fanxing-security-spring-boot-starter
 
-一个异步请求携带Token校验的简易权限框架，将所有操作都留给开发者，它只管验证当前的Token是否有权限取访问这个接口
-
-Simple token asynchronous verification authority framework, support custom success failure return to the page content
-
 码云： https://gitee.com/fxyun/fanxing-security-spring-boot-starter
 
 GIthub：https://github.com/fxboy/fanxing-security-spring-boot-starter
@@ -51,10 +47,4 @@ JDK 1.8
 Springboot 2.4.0
 
 
-:::tip
-fanxing-security-spring-boot-starter 是 一个精简版的安全框架，它将 权限校验给分离了出来，支持多种校验方式，登录和防攻击的问题，需要您自己来实现，框架内提供了3个接口来让框架实现更多的样式。
-:::
-:::warning
-如果出现依赖冲突，请将您的Springboot版本换成 2.4.0，或者您自己来找到解决当前冲突的办法。
-:::
 
